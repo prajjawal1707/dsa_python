@@ -1,8 +1,51 @@
-# find largest number
+#         50
+#        /  \
+#      30    70
+#     / \    / \
+#    20 40  60 80
 
-arr = [4,9,2,15,8]
-largest = arr[0]
-for num in arr:
-    if num > largest:
-        largest = num
-print(largest)
+# def insert(root, data):
+# Insert 35
+# def insert(root, data):
+#     while current.data == Node(data):
+#         if current.data > data:
+#             current.right = Node(data)
+#         elif current.data < data:
+#             current.left = Node(data)
+#         else:
+#             current.data = node(data)
+
+# current = root
+# while current exists:
+#     if data is smaller:
+#         if left is empty:
+#             attach new node
+#             stop
+#         otherwise:
+#             move left
+#     if data is larger:
+#         if right is empty:
+#             attach new node
+#             stop
+#         otherwise:
+#             move right
+#     if equal:
+#         stop
+        
+def insert(root, data):
+        if root is None:
+            return Node(data)
+        current = root
+        while current is not None:
+            if current.data > data:
+                if current.left is None:
+                    current.left = Node(data)
+                else:
+                    current = current.left
+            elif current.data < data:
+                if current.right is None:
+                    current.right = Node(data)
+                else:
+                    current = current.right
+            else:
+                return

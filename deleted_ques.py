@@ -1,3 +1,4 @@
+# ----------------------------------------------------------------------------------
 # 1 traversing an array
 
 # arr= [10,20,30]
@@ -9,6 +10,7 @@
 # for i in range(len(arr)):
 #     print(arr[i])
 
+# ----------------------------------------------------------------------------------
 # 2. Sum of  array
 
 # arr = [5,10,15]
@@ -17,6 +19,7 @@
 #     total = num + total
 # print(total)
 
+# ----------------------------------------------------------------------------------
 # 3. Find Largest number
 
 # arr= [4,9,2,15,8]
@@ -26,6 +29,7 @@
 #         largest = num
 # print(largest)
 
+# ----------------------------------------------------------------------------------
 # 4 Find smallest number
 
 # arr = [4,9,2,15,8]
@@ -34,6 +38,7 @@
 #     if num < smallest:
 #         smallest = num
 
+# ----------------------------------------------------------------------------------
 # 5 linear search
 
 # arr = [12,7,19,25]
@@ -42,6 +47,7 @@
 #     if arr[i] == target:
 #         print("Found at", i)
 
+# ----------------------------------------------------------------------------------
 # 6 reverse using two pointers
 
 # arr= [10,20,30,40,50]
@@ -53,6 +59,8 @@
 #     right -= 1
 # print(arr)
 
+
+# ----------------------------------------------------------------------------------
 # 7 Find the second largest number
 
 # arr = [10,5,20,18,15]
@@ -66,6 +74,7 @@
 #         second = num 
 # print(second)
 
+# ----------------------------------------------------------------------------------
 # 8 Binary Search
 
 # arr= [10,20,30,40,50]
@@ -82,6 +91,7 @@
 #     else:
 #         right = mid -1
         
+# ----------------------------------------------------------------------------------
 # 9 Bubble Sort
 
 # arr = [7,3,5,2]
@@ -91,6 +101,8 @@
 #             arr[j+1], arr[j] = arr[j], arr[j+1]
 # print(arr)
 
+
+# ----------------------------------------------------------------------------------
 # 10 Selection Sort
 
 # arr= [8,4,6,2,9]
@@ -102,6 +114,7 @@
 #     arr[i] , arr[min_index] = arr[min_index], arr[i]
 # print(arr)
 
+# ----------------------------------------------------------------------------------
 # 11 Insertion Sort
 
 # arr = [7,3,5,2]
@@ -694,6 +707,7 @@
 #         count = count + 1
 # print(count)
 
+
 # if we need to store index both so we use
 # s = {}
 # s = set()   not this
@@ -701,3 +715,27 @@
 # Dictionaries don't use .add().
 # it uses--
 # seen[x] = i
+
+
+
+# 38 Insert the data in BST- binary search tree
+
+# def insert(root, data):
+#     if root is None:
+#         return Node(data)
+#     current = root
+#     while current is not None:
+#         if data < current.data:
+#             if current.left is None:
+#                 current.left = Node(data)
+#                 return
+#             current = current.left
+#         elif data > current.data:
+#             if current.right is None:
+#                 current.right = Node(data)
+#                 return
+#             current = current.right
+#         else:
+#             return
+
+# 39..
