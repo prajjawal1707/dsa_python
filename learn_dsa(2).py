@@ -32,20 +32,20 @@
 #     if equal:
 #         stop
         
-def insert(root, data):
-        if root is None:
-            return Node(data)
-        current = root
-        while current is not None:
-            if current.data > data:
-                if current.left is None:
-                    current.left = Node(data)
-                else:
-                    current = current.left
-            elif current.data < data:
-                if current.right is None:
-                    current.right = Node(data)
-                else:
-                    current = current.right
-            else:
-                return
+# def insert(root, data):
+#         if root is None:
+#             return Node(data)
+#         current = root
+#         while current is not None:
+#             if current.data > data:
+#                 if current.left is None:
+#                     current.left = Node(data)
+#                 else:
+#                     current = current.left
+#             elif current.data < data:
+#                 if current.right is None:
+#                     current.right = Node(data)
+#                 else:
+#                     current = current.right
+#             else:
+#                 return

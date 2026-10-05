@@ -739,3 +739,77 @@
 #             return
 
 # 39..
+# 39 delete from a bst.
+# def delete(root, target):
+#     # 1. Target doesn't exist
+#     if root is None:
+#         return None
+#     # 2. Search for the target
+#     if target < root.data:
+#         root.left = delete(root.left, target)
+#     elif target > root.data:
+#         root.right = delete(root.right, target)
+#     # 3. Target found
+#     else:
+#         # Case 1: No children
+#         if root.left is None and root.right is None:
+#             return None
+#         # Case 2: Only right child
+#         elif root.left is None:
+#             return root.right
+#         # Case 3: Only left child
+#         elif root.right is None:
+#             return root.left
+#         # Case 4: Two children
+#         else:
+#             successor = root.right
+#             # Find smallest node in right subtree
+#             while successor.left is not None:
+#                 successor = successor.left
+#             # Copy successor's value
+#             root.data = successor.data
+#             # Delete original successor
+#             root.right = delete(root.right, successor.data)
+#     return root
+
+
+            #      delete(root, target)
+            #              │
+            #         root is None?
+            #         /          \
+            #       yes           no
+            #        ↓             ↓
+            #     return       compare target
+            #                     /      \
+            #                  smaller   larger
+            #                    ↓         ↓
+            #                go left    go right
+            #                     \      /
+            #                      target found
+            #                           │
+            #         ┌─────────────────┼─────────────────┐
+            #         ↓                 ↓                 ↓
+            #     no children       one child        two children
+            #         ↓                 ↓                 ↓
+            #    return None      return child      find successor
+            #                                            ↓
+            #                                     copy successor.data
+            #                                            ↓
+            #                                     delete successor
+
+
+# # A node can have a different depth and height.
+# Depth = how far DOWN from root
+# Height = how far DOWN to the deepest leaf
+
+# BST complexity depends on height.
+# - Best/average balanced case → O(log n)
+# - Worst-case skewed tree → O(n)
+
+# ----------------------------------------------------------------------------------------------------
+# Heaps
+# MAX Heap
+# The largest value is always at the root.
+# Min Heap
+# The smallest value is always at the root.
+# ------------------------------------------------------------------------------------------------------
