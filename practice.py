@@ -906,7 +906,16 @@ arr = [7,3,5,2]
 # print(arr)
 
 
-
+arr = [10,5,20,18,15]
+largest = arr[0]
+s_l = arr[0]
+for num in arr:
+    if num > largest:
+        s_l = largest
+        largest = num
+    elif num > s_l:
+        s_l = num
+print(s_l)
 
 
 

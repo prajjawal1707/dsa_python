@@ -41,11 +41,11 @@
 # ----------------------------------------------------------------------------------
 # 5 linear search
 
-# arr = [12,7,19,25]
-# target = 19
-# for i in range(len(arr)):
-#     if arr[i] == target:
-#         print("Found at", i)
+arr = [12,7,19,25]
+target = 19
+for i in range(len(arr)):
+    if arr[i] == target:
+        print("Found at", i)
 
 # ----------------------------------------------------------------------------------
 # 6 reverse using two pointers
@@ -875,3 +875,54 @@
 # Python already has a built-in heap implementation called heapq.
 # It implements a min heap. -- 
 # import heapq
+
+
+# ----------------------------------------------------------------------------------------------
+# Graphs
+# 1. Vertex (Node)
+# A point in the graph.
+# A, B, and C are vertices.
+
+# 2. Edge
+# A connection between two vertices.
+# The line between A and B is an edge.
+
+# Undirected graph
+# The connection works both ways:
+# A ─── B
+# If A is connected to B, B is also connected to A.
+# Example: friendship.
+
+# Directed graph
+# The connection has a direction:
+# A ───→ B
+# A points to B, but B doesn't necessarily point to A.
+# Example: Instagram following.
+
+
+
+# Graph Representation — Adjacency List
+        # A ─── B
+        # │     │
+        # │     │
+        # C ─── D
+
+# graph = {
+#     'A': ['B', 'C'],
+#     'B': ['A', 'D'],
+#     'C': ['A', 'D'],
+#     'D': ['B', 'C']
+# }
+
+# if we want to visit all of A's neighbors:
+# for neighbor in graph['A']:
+#     print(neighbor)
+
+                                 # Graph Traversal
+                            # /                   \
+# BFS — Breadth-First Search                       DFS — Depth-First Search
+# - Uses a queue                                    Uses recursion or a stack
+# - Explores neighbors level by level                   Goes as deep as possible before backtracking
+
+
+
