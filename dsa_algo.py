@@ -37,7 +37,7 @@
 # for num in arr:
 #     if num < smallest:
 #         smallest = num
-
+# print(smallest)
 # ----------------------------------------------------------------------------------
 # 5 linear search
 
@@ -515,7 +515,6 @@
 
 
 # 31 Search for a target in the linked list
-
 # def search (self, target):
 #     current = self.head
 #     while current != None:
@@ -548,6 +547,7 @@
 #         while current.next != None:
 #             current = current.next
 #         current.next = new_node
+
 #     def search(self,target):
 #         current = self.head
 #         while current != None:
@@ -555,6 +555,7 @@
 #                 return True
 #             current = current.next
 #         return False
+
 #     def delete(self, target):
 #         if self.head == None:
 #             return
@@ -606,8 +607,8 @@
 #             return None
 #         return self.items[0]
 
-# Frequency Counting -- hash Tables/Python Dictionaries
 
+# Frequency Counting -- hash Tables/Python Dictionaries
 # count[x] = count.get(x,0)+1
 
 # 33 First repeating element
@@ -632,7 +633,7 @@
 # 34 Two Sum with Indices using Hash Table
 
 # arr = [2,7,11,15]
-# target = 9
+# target = 18
 # seen = {}
 # for i, x in enumerate(arr):
 #     needed = target - x
@@ -717,6 +718,9 @@
 # seen[x] = i
 
 
+# Binary Search Tree - BST
+# left<parent<right
+
 
 # 38 Insert the data in BST- binary search tree
 
@@ -737,6 +741,7 @@
 #             current = current.right
 #         else:
 #             return
+
 
 # 39..
 # 39 delete from a bst.
@@ -812,4 +817,61 @@
 # The largest value is always at the root.
 # Min Heap
 # The smallest value is always at the root.
+# A heap is also a complete binary tree.
 # ------------------------------------------------------------------------------------------------------
+
+# Heap in a Array
+# Left child:
+# 2*i + 1
+
+# Right child:
+# 2*i + 2
+
+# Parent:
+# (i - 1) // 2
+
+# -------------------------------------------------------------------------------------------------------
+# adding a new number in the heap
+
+# Add 2 at the end
+    #     4
+    #    / \
+    #   7   6
+    #  / \  /
+    # 10  9 
+    
+    # Add 2 at the end -> Swap 2 and 6 -> Swap 2 and 4
+    #      2
+    #    / \
+    #   7   4
+    #  / \  /
+    # 10  9 6
+     
+# 2                                    1. Add the new element at the END
+# ↓                                                ↓ 
+# compare with 6                           2. Find its PARENT
+# ↓                                                ↓
+# swap                                    3. If child < parent
+# ↓                                                ↓
+# compare with 4                                4. SWAP
+# ↓                                                ↓
+# swap                                     5. Repeat upward
+# ↓                                                ↓
+# 2 reaches the root                 6. Stop when parent <= child
+# Always compare the new element with its current parent.
+
+# Remove root from min heap:
+# 1. Remove root
+# 2. Move last element to root
+# 3. Compare it with its children
+# 4. Swap with the smaller child if necessary
+# 5. Continue downward
+# This is called heapify down.
+
+
+
+
+# heapq
+# Python already has a built-in heap implementation called heapq.
+# It implements a min heap. -- 
+# import heapq
