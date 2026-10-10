@@ -41,11 +41,11 @@
 # ----------------------------------------------------------------------------------
 # 5 linear search
 
-arr = [12,7,19,25]
-target = 19
-for i in range(len(arr)):
-    if arr[i] == target:
-        print("Found at", i)
+# arr = [12,7,19,25]
+# target = 19
+# for i in range(len(arr)):
+#     if arr[i] == target:
+#         print("Found at", i)
 
 # ----------------------------------------------------------------------------------
 # 6 reverse using two pointers
@@ -202,7 +202,7 @@ for i in range(len(arr)):
 # name = ['P','r','a','j','j','a','w','a','l']
 # print("".join(name))
 
-# check that is it anagram or not
+# 18 check that is it anagram or not
 
 # word1 = "listen"
 # word2 = "silent"
@@ -251,7 +251,7 @@ for i in range(len(arr)):
 #         result = result + char
 # print(result)
 
-# 21 find the most frequent char in the word
+# 21 find the most frequent char in the word0000000000000000000000000000000000000000000000000000000000000
 
 # word = "mississippi"
 # count = {}
@@ -269,7 +269,6 @@ for i in range(len(arr)):
 # print(most_frequent)
 
 # 22 two sum using two pointers in sorted array
-
 # arr = [1,2,4,6,8,9]
 # target = 14
 # i = 0
@@ -284,8 +283,8 @@ for i in range(len(arr)):
 #         print("found")
 #         break
 
-# 23 reverse only vowels
 
+# 23 reverse only vowels
 # s = "leetcode"
 # s = list(s)
 # vowel = {'a','e','i','o','u'}
@@ -317,7 +316,6 @@ for i in range(len(arr)):
 # print(mx)
 
 # 25 Maximmum number of vowels -- sliding window
-
 # s ="abciiidef"
 # k = 3
 # vowel = {'a','e','i','o','u'}
@@ -925,4 +923,66 @@ for i in range(len(arr)):
 # - Explores neighbors level by level                   Goes as deep as possible before backtracking
 
 
+# BFS
+# queue = ['A']
+# visited = {'A'}
+
+# while queue:
+#     current = queue.pop(0)
+#     print(current)
+
+#     for neighbor in graph[current]:
+#         if neighbor not in visited:
+#             visited.add(neighbor)
+#             queue.append(neighbor)
+
+
+
+
+# ook so what is bfs -- in bfs let's start with the simple exmple -- FIFo as it follows the queue rule 
+# so let's suppose there is a graph / where --- 
+
+                    #    A
+                    # /    \
+                    # B     C
+                # /   \     / \
+              # D     E -- F   G
+              
+# SO IF WE START FROM A -- 
+# SO FIRST A IS CONNECTED TO B AND C 
+# SO FIRST TAKE    [A]
+# THEN    SEE A IS CONNECTED WITH B AND C SO WE WILL ADD B AND C IN THE QUEUE -- [B,C]
+# NEXT WE WILL CHECK FOR B THEN WE FIND THAT B IS CONNECTED WITH D AND E SO WE WILL ADD D THEN E -- SO QUEUE WILL BE -- [C,D,E]
+# NOW WE REMOVE C AND SEE C IS CONNECTED WITH F AND G SO NOW THE QUEUE WILL BE  - [D,E,F,G]
+# NOW CHECK WITH D BUT WE HAVE ALREADY SEEN THE D AND THEN WE WILL REMOVE E,F AND G 
+# SO THE FINAL BFS WILL BE --- LIKE THIS -- [A,B,C,D,E,F,G]
+
+
+
+# def dfs(node, visited):
+#     if node in visited:
+#         return
+
+#     visited.add(node)
+#     print(node)
+
+#     for neighbor in graph[node]:
+#         dfs(neighbor, visited)
+
+# visited = set()
+# dfs('A', visited)
+
+# the complete cycle-detection
+
+# def dfs(node, parent, visited):
+#     visited.add(node)
+#     for neighbor in graph[node]:
+#         if neighbor not in visited:
+#             if dfs(neighbor, node, visited):
+#                 return True
+#         elif neighbor != parent:
+#             return True
+#     return False
+# visited = set()
+# print(dfs('A', None, visited))
 

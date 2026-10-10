@@ -49,3 +49,14 @@
 #                     current = current.right
 #             else:
 #                 return
+
+# queue = ['A']
+# visited = {'A'}
+# while queue:
+#     current = queue.pop(0)
+#     print(current)
+#     for neighbour in graph[current]:
+#         if neighbour not in visited:
+#             visited.add(neighbour)
+#             queue.append(neighbour)
+

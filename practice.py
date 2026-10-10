@@ -133,6 +133,7 @@
 # class MinHeap:
 #     def __init__(self):
 #         self.heap =[]
+
 #     def insert(self,value):
 #         self.heap.append(value)
 #         i = len(self.heap)-1
@@ -142,6 +143,7 @@
 #                 break
 #             self.heap[parent], self.heap[i] = self.heap[i], self.heap[parent]
 #             i = parent
+
 #     def remove_min(self):
 #         if len(self.heap) == 0:
 #             return None
@@ -192,6 +194,7 @@
 #     if needed in seen:
 #         print(seen[needed], i)
 #     seen[x] = i
+
 # arr = [2,7,11,15]
 # target = 18
 # seen = {}
@@ -906,16 +909,129 @@ arr = [7,3,5,2]
 # print(arr)
 
 
-arr = [10,5,20,18,15]
-largest = arr[0]
-s_l = arr[0]
-for num in arr:
-    if num > largest:
-        s_l = largest
-        largest = num
-    elif num > s_l:
-        s_l = num
-print(s_l)
+# arr = [10,5,20,18,15]
+# largest = arr[0]
+# s_l = arr[0]
+# for num in arr:
+#     if num > largest:
+#         s_l = largest
+#         largest = num
+#     elif num > s_l:
+#         s_l = num
+# print(s_l)
+
+graph = {
+    'A': ['B', 'C'],
+    'B': ['A', 'D'],
+    'C': ['A', 'D'],
+    'D': ['B', 'C']
+}
+
+# queue = ['A']
+# visited = {}
+# while queue:
+#     current = queue.pop(0)
+#     print(current)
+#     graph['A']
+#     for neighbor in graph[current]:
+#         if neighbor not in visited:
+#             visited.add(neighbor)
+#             queue.append(neighbor)
 
 
+# queue = ['A']
+# visited = {'A'}
+# while queue:
+#     current = queue.pop(0)
+#     print(current)
 
+#     for neighbor in graph[current]:
+#         if neighbor not in visited:
+#             visited.add(neighbor)
+#             queue.append(neighbor)
+
+            
+            
+            
+# BFS
+# queue = ['A']
+# visited = {'A'}
+
+# while queue:
+#     current = queue.pop(0)
+#     print(current)
+
+#     for neighbor in graph[current]:
+#         if neighbor not in visited:
+#             visited.add(neighbor)
+#             queue.append(neighbor)
+
+# # BFS
+# queue = ['A']
+# visited = {"A"}
+# while queue:
+#     current = queue.pop(0)
+#     print(current)
+#     for neighbour in graph[current]:
+#         if neighbour not in visited:
+#             visited.add(neighbour)
+#             queue.append(neighbour)
+# queue = ["A"]
+# visited = {'A'}
+# while queue:
+#     current = queue.pop(0)
+#     print(current)
+#     for neighbour in graph[current]:
+#         if neighbour not in visited:
+#             visited.add(neighbour)
+#             queue.append(neighbour)
+
+# queue = ['A']
+# visited = {'A'}
+# while queue:
+#     current = queue.pop(0)
+#     print(current)
+#     for neighbour in graph[current]:
+#         if neighbour not in visited:
+#             visited.add(neighbour)
+#             queue.append(neighbour)
+
+# queue = ['A']
+# visited = {'A'}
+# while queue:
+#     current = queue.pop(0)
+#     print(current)
+#     for neighbour in graph[current]:
+#         if neighbour not in visited:
+#             visited.add(neighbour)
+#             queue.append(neighbour)
+
+# queue = ['A']
+# visited = ['A']
+# while queue:
+#     current = queue.pop(0)
+#     print(current)
+#     for neighbour in graph[current]:
+#         if neighbour not in visited:
+#             visited.add(neighbour)
+#             queue.append(neighbour)
+
+# queue = ['A']
+# visited = {'A'}
+# while queue:
+#     current = queue.pop(0)
+#     print(current)
+#     for neighbour in graph[current]:
+#         if neighbour not in visited:
+#             visited.add(neighbour)
+#             queue.append(neighbour)
+
+# queue = ['A']
+# visited = {'A'}
+# while queue:
+#     current = queue.pop(0)
+#     print(current)
+#     for neighbour in graph[current]:
+#         if neighbour not in visited:
+#             visited.add(neighbour)
+#             queue.append(neighbour)
