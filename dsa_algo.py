@@ -240,8 +240,7 @@
 # else:
 #     print("not a palindrome")
 
-# 20 Remove the duplicates
-
+# 20 Remove the duplicates------------------------------------------------------------------------------
 # word = "programming"
 # seen = set()
 # result = ""
@@ -251,8 +250,8 @@
 #         result = result + char
 # print(result)
 
-# 21 find the most frequent char in the word0000000000000000000000000000000000000000000000000000000000000
-
+# 21 find the most frequent char in the word000000000000000000000000000000000000000000000000000000000000
+# wrong code check and correct it ----------------------------------------------------------------------
 # word = "mississippi"
 # count = {}
 # most_frequent = ""
@@ -280,7 +279,7 @@
 #     elif sum > target:
 #         j = j-1
 #     else:
-#         print("found")
+#         print("found", i,j)
 #         break
 
 

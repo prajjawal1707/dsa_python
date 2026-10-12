@@ -632,12 +632,157 @@
 #         result = result+char
 # print(result)
 
-word = 'programming'
-seen = set()
-result = ""
-for char in word:
-    if char not in seen:
-        seen.add(char)
-        result = result+char
-print(result)
+# word = 'programming'
+# seen = set()
+# result = ""
+# for char in word:
+#     if char not in seen:
+#         seen.add(char)
+#         result = result+char
+# print(result)
+
+# word = "mississippi"
+# count = {}
+# most_frequent = ""
+# highest_count = 0
+# for char in word:
+#     if char in count:
+#         count[char] = count[char]+1
+#     else:
+#         count[char] = 1
+# for char in count:
+#     if count[char] > highest_count:
+#         highest_count = count[char]
+#         most_frequent = char
+# print(most_frequent)
+
+# word = 'mississippi'
+# count = {}
+# most_frequent = ""
+# highest_count = 0
+# for char in word:
+#     if char in count:
+#         count[char] = count[char]+1
+#     else:
+#         count[char] = 1
+# for char in count:
+#     if count[char] > highest_count:
+#         highest_count = count[char]
+#         most_frequent = char
+# print(most_frequent)
+
+# word = "mississippi"
+# count = {}
+# most_frequent = ""
+# highest_count = 0
+# for char in word:
+#     if char in count:
+#         count[char] = count[char]+1
+#     else:
+#         count[char] = 1
+# for char in count:
+#     highest_count = count[char]
+#     most_frequent = char
+# print(most_frequent)
+
+# word = "mississippi"
+# count = {}
+# most_frequent= ""
+# highest_count = 0
+# for char in word:
+#     if char in count:
+#         count[char] = count[char]+1
+#     else:
+#         count[char] = 1
+# for char in count:
+#     highest_count = count[char]
+#     most_frequent = char
+# print(most_frequent)
+
+# word = "mississippi"
+# count = {}
+# most_frequent = ""
+# highest_count = 0
+# for char in word:
+#     if char in count:
+#         count[char] = count[char]+1
+#     else:
+#         count[char] = 1
+# for char in count:
+#     highest_count = count[char]
+#     most_frequent = char
+# print(most_frequent)
+
+# word = "mississippi"
+# count = {}
+# most_frequent = ""
+# highest_count = 0
+# for char in word:
+#     if char in count:
+#         count[char] = count[char]+1
+#     else:
+#         count[char] = 1
+# for char in count:
+#     highest_count = count[char]
+#     most_frequent = char
+# print(most_frequent)
+
+# arr = [2,1,5,1,3,2]
+# k = 3
+# l = 0
+# window_sum = arr[k-3] + arr[k-2] + arr[k-1]
+# mx = window_sum
+# for e in range(k, len(arr)):
+#     window_sum = window_sum - arr[l]+arr[e]
+#     l = l+1
+#     if window_sum > mx:
+#         mx = window_sum
+# print(mx)
+
+# arr = [2,1,5,1,3,2]
+# k = 3
+# l = 0
+# window_sum = arr[k-3]+arr[k-2]+arr[k-1]
+# mx = window_sum
+# for e in range(k, len(arr)):
+#     window_sum = window_sum - arr[l]+arr[e]
+#     l = l+1
+#     if window_sum > mx:
+#         mx = window_sum
+# print(mx)
+
+# arr = [2,1,5,1,3,2]
+# k = 3
+# l =0
+# window_sum = arr[k-3]+arr[k-2]+arr[k-1]
+# mx = window_sum
+# for e in range(k , len(arr)):
+#     window_sum = window_sum - arr[l]+arr[e]
+#     l = l+1
+#     if window_sum > mx:
+#         mx = window_sum
+# print(mx)
+
+# arr = [2,1,5,1,3,2]
+# k = 3
+# l = 0
+# window_sum = arr[k-3]+arr[k-2]+arr[k-1]
+# mx = window_sum
+# for e in range(k, len(arr)):
+#     window_sum = window_sum - arr[l] + arr[e]
+#     l = l + 1
+
+#     if window_sum > mx:
+#         mx = window_sum
+# print(mx)
+
+# arr = [2,1,5,1,3,2]
+# k = 3
+# l =0
+# window_sum = arr[k-3]
+
+
+
+
+
 
