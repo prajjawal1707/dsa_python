@@ -987,63 +987,103 @@
 
 # Dijkstra Algorithm
 
-import heapq
-graph = {
-    'A': [('B', 2), ('C', 5)],
-    'B': [('A', 2), ('D', 3)],
-    'C': [('A', 5), ('D', 1)],
-    'D': [('B', 3), ('C', 1)]
-}
-distances = {
-    'A': 0,
-    'B': float('inf'),
-    'C': float('inf'),
-    'D': float('inf')
-}
-heap = [(0, 'A')]
-while heap:
-    current_distance, current_node = heapq.heappop(heap)
-    for neighbour, weight in graph[current_node]:
-        new_distance = current_distance + weight
-        if new_distance < distances[neighbour]:
-            distances[neighbour] = new_distance
-            heapq.heappush(heap, (new_distance, neighbour))
-print(distances)
+# import heapq
+# graph = {
+#     'A': [('B', 2), ('C', 5)],
+#     'B': [('A', 2), ('D', 3)],
+#     'C': [('A', 5), ('D', 1)],
+#     'D': [('B', 3), ('C', 1)]
+# }
+# distances = {
+#     'A': 0,
+#     'B': float('inf'),
+#     'C': float('inf'),
+#     'D': float('inf')
+# }
+# heap = [(0, 'A')]
+# while heap:
+#     current_distance, current_node = heapq.heappop(heap)
+#     for neighbour, weight in graph[current_node]:
+#         new_distance = current_distance + weight
+#         if new_distance < distances[neighbour]:
+#             distances[neighbour] = new_distance
+#             heapq.heappush(heap, (new_distance, neighbour))
+# print(distances)
 
 
-# Topological Sort
-from collections import deque
+# # Topological Sort
+# from collections import deque
 
-graph = {
-    'A': ['C'],
-    'B': ['C'],
-    'C': ['D'],
-    'D': []
-}
+# graph = {
+#     'A': ['C'],
+#     'B': ['C'],
+#     'C': ['D'],
+#     'D': []
+# }
+# Step 1: Calculate in-degree  
+# indegree = {node: 0 for node in graph}
+# for node in graph:
+#     for neighbor in graph[node]:
+#         indegree[neighbor] += 1
+# # Step 2: Add nodes with in-degree 0
+# queue = deque()
+# for node in graph:
+#     if indegree[node] == 0:
+#         queue.append(node)
+# # Step 3: Process nodes
+# order = []
+# while queue:
+#     node = queue.popleft()
+#     order.append(node)
+#     for neighbor in graph[node]:
+#         indegree[neighbor] -= 1
+#         if indegree[neighbor] == 0:
+#             queue.append(neighbor)
+# # Step 4: Check for a cycle
+# if len(order) == len(graph):
+#     print("Topological order:", order)
+# else:
+#     print("Graph contains a cycle")
 
-# Step 1: Calculate in-degree
+# new_dict = {key: value for item in collection}
+# indegree = {node: 0 for node in graph}
+# we can write it like this -- 
+# indegree = {}
+# for node in graph:
+#     indegree[node] = 0
 
-indegree = {node: 0 for node in graph}
-for node in graph:
-    for neighbor in graph[node]:
-        indegree[neighbor] += 1
-# Step 2: Add nodes with in-degree 0
-queue = deque()
-for node in graph:
-    if indegree[node] == 0:
-        queue.append(node)
-# Step 3: Process nodes
-order = []
-while queue:
-    node = queue.popleft()
-    order.append(node)
-    for neighbor in graph[node]:
-        indegree[neighbor] -= 1
-        if indegree[neighbor] == 0:
-            queue.append(neighbor)
-# Step 4: Check for a cycle
-if len(order) == len(graph):
-    print("Topological order:", order)
-else:
-    print("Graph contains a cycle")
+# Part 1
+# for node in graph
+# Take each key from graph, one at a time: A, B, C, D.
+# Part 2
+# node: 0
+# For each key, put the key in the new dictionary with a value of 0.
+# Part 3
+# { ... }
+# The curly braces tell Python to create a dictionary.
+
+# how to solve topological sorting 
+
+# Calculate in-degrees. ----- Put all zero-in-degree nodes into a queue.
+# Process the queue and update neighbors. ----- Check whether all nodes were processed.
+
+
+
+# Union-Find (Disjoint Set Union)
+# Union-Find is a data structure that helps us track which group each node belongs to.
+
+# parent = [0, 1, 2, 3, 4]
+# def find(node):
+#     while parent[node] != node:
+#         node = parent[node]
+#     return node
+# def union(a, b):
+#     root_a = find(a)
+#     root_b = find(b)
+#     if root_a != root_b:
+#         parent[root_b] = root_a
+# union(0, 1)
+# union(1, 2)
+# print(parent)
+# print(find(2))
 
