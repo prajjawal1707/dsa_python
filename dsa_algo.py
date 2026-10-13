@@ -1087,3 +1087,23 @@
 # print(parent)
 # print(find(2))
 
+
+# Union by rank
+# There's one more common optimization. Union by rank tries to keep the trees shallow when joining groups.
+# Instead of always attaching one root to the other, we attach the shorter tree under the taller tree.
+
+# def union(a, b):
+#     root_a = find(a)
+#     root_b = find(b)
+#     if root_a == root_b:
+#         return
+#     if rank[root_a] < rank[root_b]:
+#         parent[root_a] = root_b
+#     elif rank[root_a] > rank[root_b]:
+#         parent[root_b] = root_a
+#     else:
+#         parent[root_b] = root_a
+#         rank[root_a] += 1
+
+
+
