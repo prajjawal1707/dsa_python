@@ -781,8 +781,27 @@
 # l =0
 # window_sum = arr[k-3]
 
+import heapq
+graph = {
+    'A': [('B', 2), ('C', 5)],
+    'B': [('A', 2), ('D', 3)],
+    'C': [('A', 5), ('D', 1)],
+    'D': [('B', 3), ('C', 1)]
+}
 
+distances = {
+    'A': 0,
+    'B': float('inf'),
+    'C': float('inf'),
+    'D': float('inf')
+}
 
-
-
-
+heap = [(0, 'A')]
+while heap:
+    current_distance, current_node = heapq.heappop(heap)
+    for neighbour, weight in graph[current_node]:
+        new_distance = current_distance + weight
+        if new_distance < distances[neighbour]:
+            distances[neighbour] = new_distance
+            heapq.heappush(heap, (new_distance, neighbour))
+print(distances)

@@ -314,7 +314,7 @@
 #         mx = window_sum
 # print(mx)
 
-# 25 Maximmum number of vowels -- sliding window
+# 25 Maximmum number of vowels -- sliding window -------------------------------------------------------------------------------------------------
 # s ="abciiidef"
 # k = 3
 # vowel = {'a','e','i','o','u'}
@@ -984,4 +984,66 @@
 #     return False
 # visited = set()
 # print(dfs('A', None, visited))
+
+# Dijkstra Algorithm
+
+import heapq
+graph = {
+    'A': [('B', 2), ('C', 5)],
+    'B': [('A', 2), ('D', 3)],
+    'C': [('A', 5), ('D', 1)],
+    'D': [('B', 3), ('C', 1)]
+}
+distances = {
+    'A': 0,
+    'B': float('inf'),
+    'C': float('inf'),
+    'D': float('inf')
+}
+heap = [(0, 'A')]
+while heap:
+    current_distance, current_node = heapq.heappop(heap)
+    for neighbour, weight in graph[current_node]:
+        new_distance = current_distance + weight
+        if new_distance < distances[neighbour]:
+            distances[neighbour] = new_distance
+            heapq.heappush(heap, (new_distance, neighbour))
+print(distances)
+
+
+# Topological Sort
+from collections import deque
+
+graph = {
+    'A': ['C'],
+    'B': ['C'],
+    'C': ['D'],
+    'D': []
+}
+
+# Step 1: Calculate in-degree
+
+indegree = {node: 0 for node in graph}
+for node in graph:
+    for neighbor in graph[node]:
+        indegree[neighbor] += 1
+# Step 2: Add nodes with in-degree 0
+queue = deque()
+for node in graph:
+    if indegree[node] == 0:
+        queue.append(node)
+# Step 3: Process nodes
+order = []
+while queue:
+    node = queue.popleft()
+    order.append(node)
+    for neighbor in graph[node]:
+        indegree[neighbor] -= 1
+        if indegree[neighbor] == 0:
+            queue.append(neighbor)
+# Step 4: Check for a cycle
+if len(order) == len(graph):
+    print("Topological order:", order)
+else:
+    print("Graph contains a cycle")
 
