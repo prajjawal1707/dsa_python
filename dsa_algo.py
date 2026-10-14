@@ -1105,5 +1105,18 @@
 #         parent[root_b] = root_a
 #         rank[root_a] += 1
 
+# Dynamic Programming?
+# Dynamic Programming is a technique for solving a problem by breaking it into smaller subproblems and saving their answers so we don't have to calculate them repeatedly.
 
+# 3. The two main approaches to DP
 
+# Memoization — Top-down
+# Start with recursion and store each result after calculating it. If the same subproblem appears again, reuse the saved answer.
+
+# Tabulation — Bottom-up
+# Start with the smallest known answers and calculate larger answers in order, storing them in a list or table.
+
+# 4. The three questions to ask in DP
+# State: What does dp[i] represent?
+# Transition: How can I calculate dp[i] from smaller states?
+# Base cases: Which answers do I already know?
