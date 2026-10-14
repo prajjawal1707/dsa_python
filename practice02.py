@@ -781,27 +781,47 @@
 # l =0
 # window_sum = arr[k-3]
 
-import heapq
-graph = {
-    'A': [('B', 2), ('C', 5)],
-    'B': [('A', 2), ('D', 3)],
-    'C': [('A', 5), ('D', 1)],
-    'D': [('B', 3), ('C', 1)]
-}
+# import heapq
+# graph = {
+#     'A': [('B', 2), ('C', 5)],
+#     'B': [('A', 2), ('D', 3)],
+#     'C': [('A', 5), ('D', 1)],
+#     'D': [('B', 3), ('C', 1)]
+# }
 
-distances = {
-    'A': 0,
-    'B': float('inf'),
-    'C': float('inf'),
-    'D': float('inf')
-}
+# distances = {
+#     'A': 0,
+#     'B': float('inf'),
+#     'C': float('inf'),
+#     'D': float('inf')
+# }
 
-heap = [(0, 'A')]
-while heap:
-    current_distance, current_node = heapq.heappop(heap)
-    for neighbour, weight in graph[current_node]:
-        new_distance = current_distance + weight
-        if new_distance < distances[neighbour]:
-            distances[neighbour] = new_distance
-            heapq.heappush(heap, (new_distance, neighbour))
-print(distances)
+# heap = [(0, 'A')]
+# while heap:
+#     current_distance, current_node = heapq.heappop(heap)
+#     for neighbour, weight in graph[current_node]:
+#         new_distance = current_distance + weight
+#         if new_distance < distances[neighbour]:
+#             distances[neighbour] = new_distance
+#             heapq.heappush(heap, (new_distance, neighbour))
+# print(distances)
+
+# Create a list called dp with enough space for indexes 0 through n.
+# Set the base cases: dp[1] = 1 and dp[2] = 2.
+# Use a loop starting at 3 to calculate the remaining values.
+# Print dp[6].
+# dp = []
+# for i in range(3, 5):
+#     dp[i] = dp[i-1]+dp[i-2]
+#     dp[1] = 1
+#     dp[2] = 2
+#     if i == 6:
+#         print(dp[i])
+
+# n = 6
+# dp = [0] * (n + 1) 
+# for i in range(3,7):
+#     dp[1]=1
+#     dp[2]=2
+#     dp[i] = dp[i-1]+dp[i-2]
+# print(dp[n])

@@ -1120,3 +1120,16 @@
 # State: What does dp[i] represent?
 # Transition: How can I calculate dp[i] from smaller states?
 # Base cases: Which answers do I already know?
+
+# Climbing Stairs
+# [dp[n] = dp[n-1] + dp[n-2]]
+# dp[n] means the number of ways to reach step n.
+
+# Write a Python program that calculates the number of ways to climb n = 6 stairs.
+# n = 6
+# dp = [0] * (n + 1)
+# dp[1] = 1
+# dp[2] = 2
+# for i in range(3, n + 1):
+    # dp[i] = dp[i - 1] + dp[i - 2]
+# print(dp[n])
