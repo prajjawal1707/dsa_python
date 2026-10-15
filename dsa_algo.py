@@ -1104,9 +1104,11 @@
 #     else:
 #         parent[root_b] = root_a
 #         rank[root_a] += 1
+# ------------------------------------------------------------------------------------------------------------------------------
 
 # Dynamic Programming?
-# Dynamic Programming is a technique for solving a problem by breaking it into smaller subproblems and saving their answers so we don't have to calculate them repeatedly.
+# Dynamic Programming is a technique for solving a problem by breaking it into smaller subproblems 
+# and saving their answers so we don't have to calculate them repeatedly.
 
 # 3. The two main approaches to DP
 
@@ -1125,6 +1127,7 @@
 # [dp[n] = dp[n-1] + dp[n-2]]
 # dp[n] means the number of ways to reach step n.
 
+# i-1 , i-2  here it uses as you can either climb 1 stairs or 2 stairs.
 # Write a Python program that calculates the number of ways to climb n = 6 stairs.
 # n = 6
 # dp = [0] * (n + 1)
@@ -1181,3 +1184,17 @@
 
 # print(dp[amount])
 
+# Longest Increasing Subsequence (LIS)
+# Given this array, find the length of the longest strictly increasing subsequence.
+# not necessarily consecutive, but the order must be preserved.
+
+# nums = [10, 9, 2, 5, 3, 7, 101, 18]
+# n = len(nums)
+# dp = [1] * n
+
+# for i in range(1, n):
+#     for j in range(i):
+#         if nums[j] < nums[i]:
+#             dp[i] = max(dp[i], dp[j] + 1)
+
+# print(max(dp))
