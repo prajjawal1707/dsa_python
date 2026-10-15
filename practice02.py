@@ -825,3 +825,50 @@
 #     dp[2]=2
 #     dp[i] = dp[i-1]+dp[i-2]
 # print(dp[n])
+
+# money = [2, 7, 9, 3, 1]
+# i = 0
+# while i+4 < len(money):
+#     rob = money[i]+money[i+2]+money[i+4]
+#     i = i+1
+# print(rob)
+
+# money = [2, 7, 9, 3, 1]
+# rob = 0
+# for i in range(0,len(money), 2):
+#     rob = rob + money[i]
+# print(rob)
+
+# dp[i]=max(dp[i-1], money[i]+dp[i-2])
+
+# money = [2,7,9,3,1]
+# i = 0
+# dp = money[i]
+# for i in range(len(money)):
+#     dp[i] = max(dp[i-1], money[i]+dp[i-2])
+#     i = i + 1
+#     rob = rob + money[i+n]
+
+# money = [2,100,9,3,1]
+# n = len(money) 
+# dp = [0] * n 
+# dp[0] = money[0] 
+# dp[1] = max(money[0], money[1]) 
+# # print(dp[1])
+# for i in range(2,n):
+#     dp[i] = max(dp[i-1], money[i]+dp[i-2])
+# print(dp[i])
+
+coins = [1, 2, 5]
+amount = 11
+1 = 1
+2 = 2
+3 = 1 + 2
+4 = 2 + 2
+5 = 5
+6 = 5 + 1
+7 = 5 + 2
+
+
+
+

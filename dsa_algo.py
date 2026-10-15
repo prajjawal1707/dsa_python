@@ -1133,3 +1133,51 @@
 # for i in range(3, n + 1):
     # dp[i] = dp[i - 1] + dp[i - 2]
 # print(dp[n])
+
+# House rob prob  
+# In this there is a way that you can not rob two adjacent house so you can 
+# either rob even houses or odd houses and it depends upon which has more money has even/odd .
+
+# money = [2, 100, 9, 3, 1]
+# n = len(money)
+# dp = [0] * n
+# dp[0] = money[0]
+# dp[1] = max(money[0], money[1])
+# for i in range(2, n):
+#     dp[i] = max(dp[i-1], money[i] + dp[i-2])
+# print(dp[n-1])
+
+# coin problem 
+# For coins = [1, 2, 5] and amount = 11:
+# - dp[0] = 0: zero coins are needed to make amount zero.
+# - dp starts with infinity for every other amount because we haven't calculated those answers yet.
+# - The outer loop visits each amount from 1 through 11.
+# - The inner loop tries every coin.
+# - The if statement skips coins larger than the current amount.
+# - min() keeps the smallest number of coins found so far.
+
+# Complexity
+# - Time: {amount}*{number of coins})\)
+# - Space:{amount}
+
+
+# dp = [float('inf')] * (amount + 1)
+# dp[0] = 0
+# for i in range(1, amount + 1):
+#      for num in coins :
+#           if num <= i:
+#               dp[i] = min(dp[i], 1 + dp[i - num])
+# print(dp[amount])
+
+# coins = [1, 2, 5]
+# amount = 11
+# dp = [float('inf')] * (amount + 1)
+# dp[0] = 0
+
+# for i in range(1, amount + 1):
+#     for num in coins:
+#         if num <= i:
+#             dp[i] = min(dp[i], 1 + dp[i - num])
+
+# print(dp[amount])
+
