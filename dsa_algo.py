@@ -1282,3 +1282,32 @@ for start, end in intervals:
     else:
         merged[-1][1] = max(merged[-1][1], end)
 print(merged)
+
+
+# Meeting Rooms ----
+# def can_attend_all(intervals):
+#     intervals.sort(key=lambda x: x[0])
+#     for i in range(1, len(intervals)):
+#         if intervals[i][0] < intervals[i - 1][1]:
+#             return False
+#     return True
+# print(can_attend_all([[1, 3], [3, 5], [6, 8]]))
+# print(can_attend_all([[0, 30], [5, 10], [15, 20]]))
+# Complexity: \(O(n\log n)\) time for sorting and \(O(1)\) extra space for the checking loop, excluding sorting implementation details.
+
+
+# Non-overlapping Intervals
+# Find the minimum number of intervals to remove so the remaining intervals don't overlap.
+# Our goal is to keep as many intervals as possible without any overlap.
+
+# intervals = [[1, 2], [2, 3], [3, 4], [1, 3]]
+# intervals.sort(key=lambda x: x[1])
+# removals = 0
+# last_end = intervals[0][1]
+# for i in range(1, len(intervals)):
+#     start, end = intervals[i]
+#     if start < last_end:
+#         removals += 1
+#     else:
+#         last_end = end
+# print(removals)
