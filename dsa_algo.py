@@ -1191,10 +1191,83 @@
 # nums = [10, 9, 2, 5, 3, 7, 101, 18]
 # n = len(nums)
 # dp = [1] * n
-
 # for i in range(1, n):
 #     for j in range(i):
 #         if nums[j] < nums[i]:
 #             dp[i] = max(dp[i], dp[j] + 1)
-
 # print(max(dp))
+
+# Backtracking
+# Given a list of numbers, return every possible subset.
+# nums = [1, 2, 3]
+# The answer contains 8 subsets:
+# []
+# [1]
+# [2]
+# [3]
+# [1, 2]
+# [1, 3]
+# [2, 3]
+# [1, 2, 3]
+# 3. The key pattern
+# We usually write a recursive function that:
+# 1. Records the current subset.
+# 2. Tries adding each available number.
+# 3. Recursively explores that choice.
+# 4. Removes the number to undo the choice and try another path.
+
+# def subsets(nums):
+#     result = []
+#     current = []
+#     def backtrack(start):
+#         result.append(current.copy())
+#         for i in range(start, len(nums)):
+#             current.append(nums[i])
+#             backtrack(i + 1)
+#             current.pop()
+#     backtrack(0)
+#     return result
+# print(subsets([1, 2, 3]))
+
+
+
+# -------------------------------------------------------------------------------------------------------------
+# Permutations
+# A permutation means arranging all the numbers in a different order. We must use every number exactly once.
+# nums = [1, 2, 3]
+# Generate every possible ordering, such as [1, 2, 3], [1, 3, 2], and [2, 1, 3].
+
+# def permutations(nums):
+#     result = []
+#     current = []
+#     def backtrack():
+#         if len(current) == len(nums):
+#             result.append(current.copy())
+#             return
+#         for num in nums:
+#             if num not in current:
+#                 current.append(num)
+#                 backtrack()
+#                 current.pop()
+#     backtrack()
+#     return result
+# print(permutations([1, 2, 3]))
+
+
+
+# Greedy Algorithm
+# 1. What is a greedy algorithm?
+# A greedy algorithm makes the best choice it can at the current step, hoping those choices lead to the best overall result.
+
+# 2. Interval problem:
+
+intervals = [[1, 3], [2, 5], [4, 7], [6, 9]]
+# Sort by ending time
+intervals.sort(key=lambda x: x[1])
+count = 0
+last_end = float('-inf')
+for start, end in intervals:
+    if start >= last_end:
+        count += 1
+        last_end = end
+print(count)
