@@ -1261,13 +1261,24 @@
 
 # 2. Interval problem:
 
-intervals = [[1, 3], [2, 5], [4, 7], [6, 9]]
-# Sort by ending time
-intervals.sort(key=lambda x: x[1])
-count = 0
-last_end = float('-inf')
+# intervals = [[1, 3], [2, 5], [4, 7], [6, 9]]
+# # Sort by ending time
+# intervals.sort(key=lambda x: x[1])
+# count = 0
+# last_end = float('-inf')
+# for start, end in intervals:
+#     if start >= last_end:
+#         count += 1
+#         last_end = end
+# print(count)
+
+# Merge the intervals 
+intervals = [[1, 3], [2, 6], [8, 10], [9, 12]]
+intervals.sort(key=lambda x: x[0])
+merged = []
 for start, end in intervals:
-    if start >= last_end:
-        count += 1
-        last_end = end
-print(count)
+    if not merged or start > merged[-1][1]:
+        merged.append([start, end])
+    else:
+        merged[-1][1] = max(merged[-1][1], end)
+print(merged)
