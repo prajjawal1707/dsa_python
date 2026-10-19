@@ -93,6 +93,7 @@
         
 # ----------------------------------------------------------------------------------
 # 9 Bubble Sort
+# Compare two neighboring elements. If they're in the wrong order, swap them.
 
 # arr = [7,3,5,2]
 # for i in range(len(arr)):
@@ -104,6 +105,7 @@
 
 # ----------------------------------------------------------------------------------
 # 10 Selection Sort
+# Find the smallest element and put it at the beginning. Then find the next smallest and put it in the next position.
 
 # arr= [8,4,6,2,9]
 # for i in range(len(arr)):
@@ -116,6 +118,7 @@
 
 # ----------------------------------------------------------------------------------
 # 11 Insertion Sort
+
 
 # arr = [7,3,5,2]
 # for i in range(1, len(arr)):
@@ -1311,3 +1314,4 @@
 #     else:
 #         last_end = end
 # print(removals)
+
