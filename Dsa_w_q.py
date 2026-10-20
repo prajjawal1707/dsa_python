@@ -58,5 +58,16 @@
 # seen.add(5)
 # seen.add(3)
 # seen.add(5)
-
 # print(seen)
+
+
+# count = {}
+# count[5] = 2
+# count[3] = 1
+# print(count)
+# A dictionary stores key-value pairs.
+# ------------------------------------------------------------------------------------------
+# seen = set() → Have I seen this element before?
+# count = {} → How many times have I seen this element?
+# seen = {} is actually an empty dictionary, not a set. Use set() for an empty set.
+# ------------------------------------------------------------------------------------------

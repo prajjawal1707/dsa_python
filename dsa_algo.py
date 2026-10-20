@@ -632,7 +632,7 @@
 
 # 34 Two Sum with Indices using Hash Table
 
-# arr = [2,7,11,15]
+# arr = [2, 7, 11, 15]
 # target = 18
 # seen = {}
 # for i, x in enumerate(arr):
@@ -640,6 +640,7 @@
 #     if needed in seen:
 #         print(seen[needed], i)
 #     seen[x] = i
+# --------------------------------------------------------------------------------------------------------000000000000000000000
 
 # 35 found the first not repeated element using hash table
 

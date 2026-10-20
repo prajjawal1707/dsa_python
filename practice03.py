@@ -131,13 +131,42 @@
     #         print(i,j)
     #         break
         
-nums = [2,7,11,15]
-target = 18
-j = 
+# nums = [2,7,11,15]
+# target = 18
+# seen = {}
+# for i,x in enumerate(nums):
+#     needed = target - x
+#     if needed in seen:
+#         print(seen[needed], i)
+#     seen[x] = i
+# nums = [2,7,11,15]
 
-for i in range(len(nums)):
-    # for j in range(len(nums)):
-        if nums[i]+nums[j] == target:
-            j = j + 1
-            print(i,j)
+# s = "A man, a plan, ab canal: Panama"
+# # for char in s:
+#     key = "".join(char)
+#     print(key)
+
+# k = s.lower().replace(" ", "").replace(",", "").replace(":", "")
+# i = 0
+# j = len(k)-1
+# while i < j:
+#     if k[i] != k[j]:
+#         print(False)
+#         break
+#         i = i+1
+#         j = j-1
+#     else:
+#         print(True)
+#         break
+
+# for i in range(len(nums)):
+#     # for j in range(len(nums)):
+#         if nums[i]+nums[j] == target:
+#             j = j + 1
+#             print(i,j)
+
+# count = {}
+# count[5] = 2
+# count[3] = 1
+# print(count)
 
