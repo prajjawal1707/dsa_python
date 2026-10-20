@@ -52,3 +52,11 @@
 # For traversing an array, both methods have linear time complexity, 
 # (O(n)). Prefer for x in arr when you only need the elements. Use for 
 # i in range(len(arr)) when you need the index to access or modify elements.
+
+# A set stores unique elements. Adding 5 twice does not create two copies.
+# seen = set()
+# seen.add(5)
+# seen.add(3)
+# seen.add(5)
+
+# print(seen)
