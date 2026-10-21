@@ -170,3 +170,20 @@
 # count[3] = 1
 # print(count)
 
+# s = "pwwkew"
+# seen = set()
+# i = 0
+# for ch in s:
+#     if ch in seen:
+#         print(seen)
+#         i = i+1
+#         # break
+#     else:
+#         seen.add(ch)
+
+arr = [3, 8, 12, 5, 7, 10, 4]
+count = 0
+for num in arr:
+    if num % 2 == 0:
+        count= count+1
+print(count)

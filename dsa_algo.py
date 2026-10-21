@@ -90,7 +90,7 @@
 #         left = mid+1
 #     else:
 #         right = mid -1
-        
+
 # ----------------------------------------------------------------------------------
 # 9 Bubble Sort
 # Compare two neighboring elements. If they're in the wrong order, swap them.
@@ -116,19 +116,40 @@
 #     arr[i] , arr[min_index] = arr[min_index], arr[i]
 # print(arr)
 
-# ----------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------------
 # 11 Insertion Sort
-
+# in this first we take a element and then check it's posiion is it correct position or not then if not then we will try to put in on the 
+# right position in the left arr which is like a sorted array if it is greater that or not if it suitable there we add it ther then find
+# the best array sorted/not sorted
 
 # arr = [7,3,5,2]
+# for i in range(1, len(arr)):   
+#     key = arr[i]                           # Here we put an elemnet like save it here 
+#     j = i-1                                # now we take j before the key 
+#     while j >= 0 and arr[j] > key:         # now we check that is j is positive or not then check that is key greater or not
+#         arr[j+1] = arr[j]                  # now we put the arr[j+1] to the arr[j] position mans currently both becomes same 
+#         j = j-1                            # here we again less the value of j like in 128
+#     arr[j+1] = key                         # now we change it here as we had already save the key before now chamge the value
+# print(arr)
+
+# arr = [7, 3, 5, 2]
 # for i in range(1, len(arr)):
 #     key = arr[i]
-#     j = i-1
+#     j = i - 1
 #     while j >= 0 and arr[j] > key:
-#         arr[j+1] = arr[j]
-#         j = j-1
-#     arr[j+1] = key
+#         arr[j + 1] = arr[j]
+#         j = j - 1
+#     arr[j + 1] = key
 # print(arr)
+
+# Find the even numbers ----------------------------------------------------------------------------------------------------------
+# arr = [3, 8, 12, 5, 7, 10, 4]
+# count = 0
+# for num in arr:
+#     if num % 2 == 0:
+#         count= count+1
+# print(count)
+
 
 # 12 Find the missing number 
 
@@ -141,8 +162,28 @@
 #     expected_sum = num + expected_sum
 # print(expected_sum - actual_sum)
 # print(expected_sum)
+                                        #    or 
+                                        
+# if it is sorted and you know it's last value is the last value till where i have to add 
+# def find_missing(arr):
+#     n = len(arr) + 1
+#     expected_sum = n * (n + 1) // 2
+#     actual_sum = sum(arr)
+#     return expected_sum - actual_sum
+# arr = [1, 2, 4, 5]
+# print(find_missing(arr))
+
+# For an array containing numbers from 0 to n, with one number missing, use this version:
+# def missing_number(nums):
+#     n = len(nums)
+#     expected_sum = n * (n + 1) // 2
+#     return expected_sum - sum(nums)
+# print(missing_number([3, 0, 1]))
+
+
 
 # 13 Recursion (print 1 to 5)
+
 
 # def print_num(n):
 #     if n > 5:
@@ -160,7 +201,7 @@
 #     countdown(n-1)
 # countdown(5)
 
-# def factorial(n):
+# def factorial(n)
 #     if n == 0:
 #         return 1
 #     return n * factorial(n-1)
@@ -205,7 +246,7 @@
 # name = ['P','r','a','j','j','a','w','a','l']
 # print("".join(name))
 
-# 18 check that is it anagram or not
+# 18 check that is it anagram or not////////////////////////////////////////////////////////////////////////////////////
 
 # word1 = "listen"
 # word2 = "silent"
