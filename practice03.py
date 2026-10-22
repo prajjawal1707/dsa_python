@@ -181,9 +181,37 @@
 #     else:
 #         seen.add(ch)
 
-arr = [3, 8, 12, 5, 7, 10, 4]
-count = 0
-for num in arr:
-    if num % 2 == 0:
-        count= count+1
-print(count)
+# arr = [3, 8, 12, 5, 7, 10, 4]
+# count = 0
+# for num in arr:
+#     if num % 2 == 0:
+#         count= count+1
+# print(count)
+
+# word = "programming"
+# count = {}
+# for char in word:
+#     if char in count:
+#         count[char] = count[char] + 1
+#     else:
+#         count[char] = 1
+# print(count[char])
+
+#  Longest Substring Without Repeating Characters
+# s = "abcabcbb"
+# seen = set()
+# for char in s:
+#     # print(char)
+#     if char in seen:
+#         print(char)
+#         break
+
+
+word1 = "listen"
+word2 = "silent"
+count1 = {}
+count2 = {}
+for char in word1:
+    if char in count1:
+        count1[char] = count1[char] + 1
+print(count1)

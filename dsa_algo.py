@@ -182,8 +182,12 @@
 
 
 
-# 13 Recursion (print 1 to 5)
+# 13 Recursion 
+# def hello():
+#     print("hello")
+# hello()
 
+# (print 1 to 5) using recursion 
 
 # def print_num(n):
 #     if n > 5:
@@ -208,6 +212,33 @@
 # print(factorial(5))
 
 
+# the interesting part: recursion going BACK
+
+# def count(n):
+#     if n == 0:
+#         return
+#     print(n)
+#     count(n - 1)
+#     print("Done", n)
+# count(3)
+
+# these go two side like countdown and counting
+
+# def test(n):
+#     if n == 0:
+#         return
+#     print("A", n)
+#     test(n - 1)
+#     print("B", n)
+# test(2)
+
+# # find total using resursion 
+# def total(n):
+#     if n == 0:
+#         return 0
+#     return n + total(n - 1)
+# print(total(5))
+
 # 15 Count vowels -- string
 
 # word = "programming"
@@ -216,6 +247,23 @@
 # for char in word:
 #     if char in vowel:
 #         count = count+1
+# print(count)
+
+# reverse the strings 
+
+# word = "hello"
+# reversed_word = ""
+# for char in word:
+#     reversed_word = char + reversed_word
+# print(reversed_word)
+
+
+# count the g in the word 
+
+# word = 'programming'
+# for char in word:
+#     if char == "g":
+#         count += 1
 # print(count)
 
 
@@ -246,7 +294,7 @@
 # name = ['P','r','a','j','j','a','w','a','l']
 # print("".join(name))
 
-# 18 check that is it anagram or not////////////////////////////////////////////////////////////////////////////////////
+# 18 check that is it anagram or not
 
 # word1 = "listen"
 # word2 = "silent"
@@ -267,7 +315,8 @@
 # else:
 #     print("na")
 
-# 19 check that is it palindrom or not by using flag
+
+# 19 check that is it palindrome or not by using flag
 
 # word = 'racecar'
 # palindrome = True
@@ -284,6 +333,17 @@
 # else:
 #     print("not a palindrome")
 
+#                                           or 
+# word = "racecar"
+# reversed = ""
+# for char in word:
+#     reversed = char+reversed
+# if word == reversed:
+#     print("palindrome")
+# else:
+#     print("not a palindrome")
+
+
 # 20 Remove the duplicates------------------------------------------------------------------------------
 # word = "programming"
 # seen = set()
@@ -294,7 +354,7 @@
 #         result = result + char
 # print(result)
 
-# 21 find the most frequent char in the word000000000000000000000000000000000000000000000000000000000000
+# 21 find the most frequent char in the word
 # wrong code check and correct it ----------------------------------------------------------------------
 # word = "mississippi"
 # count = {}
@@ -310,6 +370,8 @@
 #         highest_count = count[char]
 #         most_frequent = char
 # print(most_frequent)
+
+
 
 # 22 two sum using two pointers in sorted array
 # arr = [1,2,4,6,8,9]
