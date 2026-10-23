@@ -71,3 +71,6 @@
 # count = {} → How many times have I seen this element?
 # seen = {} is actually an empty dictionary, not a set. Use set() for an empty set.
 # ------------------------------------------------------------------------------------------
+
+# s = "A man, a plan, a canal: Panama" -- #in this type of question we have to ignore the ,: so we use here
+# char.isalnum() -- # by this it will only store the word so after that it will ignore the ,:""

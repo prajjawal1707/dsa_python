@@ -206,12 +206,30 @@
 #         print(char)
 #         break
 
+# word1 = "listen"
+# word2 = "silent"
+# count1 = {}
+# count2 = {}
+# for char in word1:
+#     if char in count1:
+#         count1[char] = count1[char] + 1
+# print(count1)
 
-word1 = "listen"
-word2 = "silent"
-count1 = {}
-count2 = {}
-for char in word1:
-    if char in count1:
-        count1[char] = count1[char] + 1
-print(count1)
+# word = "mississippi"
+# count = {}
+# most_frequent = ""
+# highest_count = 0
+# for char in word:
+#     if char in count:
+#         count[char] = count[char] + 1
+#     else:
+#         count[char] = 1
+# for char in count:
+#     if count[char] > highest_count:
+#         highest_count = count[char]
+#         most_frequent = char
+# print(most_frequent)
+
+s = "leetcode"
+s = list(s)
+print(s)

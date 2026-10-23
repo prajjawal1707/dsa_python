@@ -387,9 +387,43 @@
 #     else:
 #         print("found", i,j)
 #         break
+# here why we use sum<target or sum > target because if we continuously change i and j then it may be happen 
+# that if both will go at same time so may be if we want to stop one and want to last element so we have to stop
+# one it could be happen if use sum>/< target....
+
+
+# Make a unique array 
+
+# arr = [1, 1, 2, 2, 3, 4, 4, 5]
+# i = 0
+# j = 1
+# while j < len(arr):
+#     if arr[i] == arr[j]:
+#         j = j + 1
+#     else:
+#         i = i + 1
+#         arr[i] = arr[j]
+#         j = j + 1
+# print(arr[:i+1])
+
+# Move zeros at the end
+ 
+# arr = [0, 1, 0, 3, 12]
+# i = 0
+# j = 0
+# while j < len(arr):
+#     if arr[j] == 0:
+#         j = j + 1
+#     else:
+#         arr[j], arr[i] = arr[i], arr[j]
+#         i = i + 1
+#         j = j + 1
+# print(arr)
+
 
 
 # 23 reverse only vowels
+
 # s = "leetcode"
 # s = list(s)
 # vowel = {'a','e','i','o','u'}
@@ -405,6 +439,30 @@
 #         i = i+1
 #         j = j-1
 # print(s)
+
+# Is it palindrome or not 
+
+# s = "A man, a plan, a canal: Panama"
+# c = ""
+# for char in s.lower():
+#     if char.isalnum():
+#         c = c + char
+# i = 0
+# j = len(c)-1
+# c = list(c)
+# palindrome = True
+# while i < j:
+#     if c[i] == c[j]:
+#         i += 1
+#         j -= 1
+#     else:
+#         palindrome = False
+#         break
+# if palindrome:
+#     print("palindrome")
+# else:
+#     print("not palindrome")
+
 
 # 24 Sliding window -- max sum of k consecutive elements
 
