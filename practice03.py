@@ -230,6 +230,10 @@
 #         most_frequent = char
 # print(most_frequent)
 
-s = "leetcode"
-s = list(s)
-print(s)
+# s = "leetcode"
+# s = list(s)
+# print(s)
+# s = "abciiidef"
+# k = 3
+# for char in s:
+#     print(char)

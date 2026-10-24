@@ -466,19 +466,20 @@
 
 # 24 Sliding window -- max sum of k consecutive elements
 
-# arr = [2,1,5,1,3,2]
+# arr = [2, 1, 5, 1, 3, 2]
 # k = 3
 # l = 0
 # window_sum = arr[k-3] + arr[k-2] + arr[k-1]
 # mx = window_sum
 # for e in range(k, len(arr)):
-#     window_sum = window_sum - arr[l]+arr[e]
-#     l = l+1
+#     window_sum = window_sum - arr[l] + arr[e]
+#     l = l + 1
 #     if window_sum > mx:
 #         mx = window_sum
 # print(mx)
 
 # 25 Maximmum number of vowels -- sliding window -------------------------------------------------------------------------------------------------
+
 # s ="abciiidef"
 # k = 3
 # vowel = {'a','e','i','o','u'}
@@ -496,6 +497,8 @@
 #     l += 1
 #     mx = max(mx,count)
 # print(mx)
+
+
 #  or 
 
 # s = "abciiidef"
