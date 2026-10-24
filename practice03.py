@@ -237,3 +237,46 @@
 # k = 3
 # for char in s:
 #     print(char)
+
+
+# s = "pwwkew"
+# s = "abciiidef"
+# k = 3
+# vowel = {'a','e','i','o','u'}
+# window_count = 0
+# for i in range(k):
+#     if s[i] in vowel:
+#         window_count += 1
+# max_vowels = window_count
+# for i in range(k, len(s)):
+#     if s[i-k] in vowel:
+#         window_count -= 1
+#     if s[i] in vowel:
+#         window_count += 1
+#     max_vowel = max(max_vowel, window_count)
+
+# s = "abciiidef"
+# k = 3
+# vowel = {'a,','e','i','o','u'}
+# window_count = 0
+# for i in range(k):
+#     if s[i] in vowel:
+#         window_count += 1
+# max_vowel = window_count
+# for i in range(k,len(s)):
+#     if s[i-k] in vowel:
+#         window_count -=1
+#     if s[i] in vowel:
+#         window_count += 1
+#     max_vowel = max(max_vowel, window_count)
+
+
+
+# sum = 250+250+600+600+600+600+300+300+600+600
+# sum = 250+500+500+250+650+650+600+600+600+600+500+500+900+900+600+250+900+600+600+200
+# print(sum)
+
+s = "pwwkew"
+count = {}
+for char in s:
+    print(char)
