@@ -200,11 +200,6 @@
 #  Longest Substring Without Repeating Characters
 # s = "abcabcbb"
 # seen = set()
-# for char in s:
-#     # print(char)
-#     if char in seen:
-#         print(char)
-#         break
 
 # word1 = "listen"
 # word2 = "silent"
@@ -271,12 +266,94 @@
 #     max_vowel = max(max_vowel, window_count)
 
 
-
 # sum = 250+250+600+600+600+600+300+300+600+600
 # sum = 250+500+500+250+650+650+600+600+600+600+500+500+900+900+600+250+900+600+600+200
 # print(sum)
 
-s = "pwwkew"
-count = {}
-for char in s:
-    print(char)
+
+# s = "pwwkew"
+# seen = set()
+# count = {}
+# for char in s:
+#     if char in seen:
+#         break
+#     else:
+#         seen = seen.add(char)
+#     print(seen)
+# i = 0 
+# j = 3
+# print(s[i:j])
+
+# s = "pwwkew"
+# i = 0
+# j = i+1
+# while j < len(s)+1:
+#     # j = j+1
+#     if s[i] != s[j]:
+#         j = j+1
+#         i = i +1
+#         print(s[i:j])
+    # else:
+    #     print(s[i:j])
+
+# s = "pwwkew"
+# seen = ()
+
+# for char in s:
+#     if char not in seen:
+#         seen = seen.add(char)
+#         print(seen)
+#     elif char in seen:
+#         break
+        # print(len(seen))
+
+# how i will solve 
+# first take the element between i and j where i and j will be 0 
+# and then l and r 
+# if char in appeared again we just remove the left element 
+# then print len(char)
+
+# s = "pwwkew"
+# seen = set()
+# i = 0
+# j = 1
+# for char in s:
+#     seen = seen.add(char)
+#     print(seen)
+    # word = s[i:j]
+    # # j = j+1
+    # if char not in word:
+    #     j = j+1
+    #     # print(word)
+    # if char in word:
+    #     print(word)
+    #     i = i +1
+    #     break
+
+# s = "pwwkew"
+# i = 0
+# j = 0
+# seen = set()
+# max_length = 0
+# while j < len(s):
+#     if s[j] not in seen:
+#         seen.add(s[j])
+#         max_length = max(max_length, j-i+1)
+#         j = j+1
+#     elif s[j] in seen:
+#         seen.remove(s[i])
+#         i = i+1
+# print(max_length)
+
+# Longest Palindromic Substring
+s = "babad"
+i = 0
+j = 2
+seen = set()
+while j < len(s):
+    if s[i] == s[j]:
+        seen.add(s[i:j])
+        
+    elif s[i] != s[j]:
+        seen.remove(s[j])        
+print(seen)
