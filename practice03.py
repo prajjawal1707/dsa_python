@@ -488,3 +488,8 @@ for i in range(len(s)):
         left -= 1
         right += 1
 print(s[start:start + max_length])
+
+
+# Palindromic Substrings
+s = "aaa"
+6

@@ -99,3 +99,43 @@
 #         left -= 1
 #         right += 1
 # print(s[start:start + max_length])
+
+
+# s = "cbbd"
+# i = 0
+# j = len(s)
+# d_a_ = s[i:j]
+# # print(d_a_)
+# palindrom = True
+# while i < j:
+#     if s != s[::-1]:                                          it fails at "a"
+#         palindrom = False
+#         break
+#     i += 1
+#     j -= 1
+# if not palindrom:
+#     d_a_ = s[i+1:j]
+#     i = i+1
+# elif not palindrom:
+#     d_a_ = s[i:j+1]
+#     j = j-1
+# print(d_a_)
+
+# s = "babad"
+# i = 0
+# j = len(s)-1
+# d_a_ = s[i:j]
+# palindrom = True
+# while i<j:
+#     if s[i] != s[j]:
+#         palindrom = False
+#         break                                       it fails at "cbbd"               
+#     i += 1
+#     j -= 1
+# if not palindrom:
+#     d_a_ = s[i+1:j]
+#     i = i+1
+# elif not palindrom:
+#     d_a_ = s[i:j-1]
+#     j = j-1
+# print(d_a_)
