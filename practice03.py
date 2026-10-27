@@ -398,11 +398,93 @@
 #         j = j-1
 #         print(seen)
 
+# s = "cbbd"
+# i = 0
+# j = len(s)
+# word = s[i:j]
+# print(word)
+
+# how i will solve this question -- first i will take i and j i at 0 and j at len(s)
+# and then first check that is it palindrome if not then first i will decrese the value
+# of j and still it is not palindrome then i will increase the value of i 
+
+# s = "babad"
+# i = 0
+# j = len(s)-1
+# d_a_ = s[i:j]
+# palindrom = True
+# while i<j:
+#     if s[i] != s[j]:
+#         palindrom = False
+#         break
+#     i += 1
+#     j -= 1
+# if not palindrom:
+#     d_a_ = s[i+1:j]
+#     i = i+1
+# elif not palindrom:
+#     d_a_ = s[i:j-1]
+#     j = j-1
+# print(d_a_)
+
+# s = "cbbd"
+# i = 0
+# j = len(s)
+# d_a_ = s[i:j]
+# # print(d_a_)
+# palindrom = True
+# while i < j:
+#     if s != s[::-1]:
+#         palindrom = False
+#         break
+#     i += 1
+#     j -= 1
+# if not palindrom:
+#     d_a_ = s[i+1:j]
+#     i = i+1
+# elif not palindrom:
+#     d_a_ = s[i:j+1]
+#     j = j-1
+# print(d_a_)
+
+# a = ""
+# b = "def"
+# print(a+b)
+
+# s = "b"
+# longest = ""
+
+# for i in range(len(s)):
+#     for j in range(i + 1, len(s) + 1):
+#         substring = s[i:j]
+
+#         if substring == substring[::-1]:
+#             if len(substring) > len(longest):
+#                 longest = substring
+
+# print(longest)
+
+
 s = "cbbd"
-i = 0
-j = len(s)-1
-while i < j:
-    if s[i] != s[j]:
-        break
-    
-    ...
+start = 0
+max_length = 0
+for i in range(len(s)):
+    # Case 1: Odd-length palindrome
+    left = i
+    right = i
+    while left >= 0 and right < len(s) and s[left] == s[right]:
+        if right - left + 1 > max_length:
+            start = left
+            max_length = right - left + 1
+        left -= 1
+        right += 1
+    # Case 2: Even-length palindrome
+    left = i
+    right = i + 1
+    while left >= 0 and right < len(s) and s[left] == s[right]:
+        if right - left + 1 > max_length:
+            start = left
+            max_length = right - left + 1
+        left -= 1
+        right += 1
+print(s[start:start + max_length])

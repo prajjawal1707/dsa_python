@@ -74,3 +74,28 @@
 
 # s = "A man, a plan, a canal: Panama" -- #in this type of question we have to ignore the ,: so we use here
 # char.isalnum() -- # by this it will only store the word so after that it will ignore the ,:""
+
+# Longest Palindromic Substring
+# s = "cbbd"
+# start = 0
+# max_length = 0
+# for i in range(len(s)):
+#     # Case 1: Odd-length palindrome
+#     left = i
+#     right = i
+#     while left >= 0 and right < len(s) and s[left] == s[right]:
+#         if right - left + 1 > max_length:
+#             start = left
+#             max_length = right - left + 1
+#         left -= 1
+#         right += 1
+#     # Case 2: Even-length palindrome
+#     left = i
+#     right = i + 1
+#     while left >= 0 and right < len(s) and s[left] == s[right]:
+#         if right - left + 1 > max_length:
+#             start = left
+#             max_length = right - left + 1
+#         left -= 1
+#         right += 1
+# print(s[start:start + max_length])
