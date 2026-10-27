@@ -465,31 +465,93 @@
 # print(longest)
 
 
-s = "cbbd"
-start = 0
-max_length = 0
-for i in range(len(s)):
-    # Case 1: Odd-length palindrome
-    left = i
-    right = i
-    while left >= 0 and right < len(s) and s[left] == s[right]:
-        if right - left + 1 > max_length:
-            start = left
-            max_length = right - left + 1
-        left -= 1
-        right += 1
-    # Case 2: Even-length palindrome
-    left = i
-    right = i + 1
-    while left >= 0 and right < len(s) and s[left] == s[right]:
-        if right - left + 1 > max_length:
-            start = left
-            max_length = right - left + 1
-        left -= 1
-        right += 1
-print(s[start:start + max_length])
+# s = "cbbd"
+# start = 0
+# max_length = 0
+# for i in range(len(s)):
+#     # Case 1: Odd-length palindrome
+#     left = i
+#     right = i
+#     while left >= 0 and right < len(s) and s[left] == s[right]:
+#         if right - left + 1 > max_length:
+#             start = left
+#             max_length = right - left + 1
+#         left -= 1
+#         right += 1
+#     # Case 2: Even-length palindrome
+#     left = i
+#     right = i + 1
+#     while left >= 0 and right < len(s) and s[left] == s[right]:
+#         if right - left + 1 > max_length:
+#             start = left
+#             max_length = right - left + 1
+#         left -= 1
+#         right += 1
+# print(s[start:start + max_length])
 
+
+# //
+
+
+# d = ()
+# if d != d[::-1]:
+#     palindrome = False
+
+# s = "cbbd"
+
+# start = 0
+# max_length = 0
+
+# for i in range(len(s)):
+#     # Case 1: Odd-length palindrome
+#     left = i
+#     right = i
+#     while left >= 0 and right < len(s) and s[left] == s[right]:
+#         if right - left + 1 > max_length:
+#             start = left
+#             max_length = right - left + 1
+#         left -= 1
+#         right += 1
+#     left = i
+#     right = i + 1
+#     while left >= 0 and right < len(s) and s[left] == s[right]:
+#         if right - left + 1 > max_length:
+#             start = left
+#             max_length = right - left + 1
+
+#         left -= 1
+#         right += 1
+
+# print(s[start:start + max_length])
+
+height = [1,8,6,2,5,4,8,3,7]
 
 # Palindromic Substrings
-s = "aaa"
-6
+
+# s = "aaa"
+# palindrome = True
+# count = 0
+# i = 0
+# for char in s:
+#     count = count+1
+# if s == s[::-1]:
+#     palindrome = True
+#     if s[i:] is palindrome:
+#         count = count +1
+#         i = i+1
+#     print(count)
+
+# how we gonna to solve this problem -- dheere dheere pahle i barhao till last element and then start from j and dheere j ko ghatao till the first element
+
+# s = "ababbc"
+# i = 0
+# j = len(s)
+# seen = ""
+# for char in s:
+#     seen = seen + char
+    
+#     seen = seen + s[i:]
+#     i = i+1
+#     seen = seen + s[j:]
+#     j = j-1
+#     print(seen)
