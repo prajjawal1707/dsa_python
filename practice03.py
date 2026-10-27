@@ -346,14 +346,63 @@
 # print(max_length)
 
 # Longest Palindromic Substring
-s = "babad"
+
+# s = "babad"
+# i = 0
+# j = 1
+# seen = set()
+# while j < len(s):
+    # ...
+# s = "babad"
+
+# how to solve it -- first we will take it's first letter then we will add another 
+# if both are same then it is also palindrom add in the pd_word if not a palindrome then
+# add another check is it palindrom or not if yes add in the pd_word if not exit
+
+# s = "babad"
+# seen = set()
+# i = 0 
+# j = 0
+# while j < len(s)-1:
+#     j = j+1
+#     if s[i] == s[j]:
+#         seen.add(s[i])
+#         # palindrom =
+# print(seen)
+
+
+# s = "babad"
+# seen = set()
+# i = 0
+# j = 0
+# while j < len(s)-1:
+#     # if s[i] == s[j]:
+#     #     palindrome = True
+#     #     j = j+1
+#     #     i = i+1
+#     # if seen is palindrome:
+#     j = j+1
+#     seen = seen.add(s[j])
+#     print(seen)
+
+# s = "cbbd"
+# seen = ""
+# for char in s:
+#     seen = seen+char
+#     i = 0
+#     j = len(seen)-1
+#     while i < j:
+#         if seen[i] != seen[j]:
+#             break
+#         i = i+1 
+#         j = j-1
+#         print(seen)
+
+s = "cbbd"
 i = 0
-j = 2
-seen = set()
-while j < len(s):
-    if s[i] == s[j]:
-        seen.add(s[i:j])
-        
-    elif s[i] != s[j]:
-        seen.remove(s[j])        
-print(seen)
+j = len(s)-1
+while i < j:
+    if s[i] != s[j]:
+        break
+    
+    ...
