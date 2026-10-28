@@ -524,7 +524,7 @@
 
 # print(s[start:start + max_length])
 
-height = [1,8,6,2,5,4,8,3,7]
+# height = [1,8,6,2,5,4,8,3,7]
 
 # Palindromic Substrings
 
@@ -543,7 +543,7 @@ height = [1,8,6,2,5,4,8,3,7]
 
 # how we gonna to solve this problem -- dheere dheere pahle i barhao till last element and then start from j and dheere j ko ghatao till the first element
 
-# s = "ababbc"
+# s = "aaa"
 # i = 0
 # j = len(s)
 # seen = ""
@@ -555,3 +555,12 @@ height = [1,8,6,2,5,4,8,3,7]
 #     seen = seen + s[j:]
 #     j = j-1
 #     print(seen)
+
+
+s = "aaa"
+count = 0
+for i in range(len(s)-1):
+    for j in range(len(s)):
+        if (s[i:j]) == s[i:j][::-1]:
+            count += 1
+print(count)

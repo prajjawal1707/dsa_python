@@ -76,29 +76,29 @@
 # char.isalnum() -- # by this it will only store the word so after that it will ignore the ,:""
 
 # Longest Palindromic Substring
-s = "cbbd"
-start = 0
-max_length = 0
-for i in range(len(s)):
-    # Case 1: Odd-length palindrome
-    left = i
-    right = i
-    while left >= 0 and right < len(s) and s[left] == s[right]:
-        if right - left + 1 > max_length:
-            start = left
-            max_length = right - left + 1
-        left -= 1
-        right += 1
-    # Case 2: Even-length palindrome
-    left = i
-    right = i + 1
-    while left >= 0 and right < len(s) and s[left] == s[right]:
-        if right - left + 1 > max_length:
-            start = left
-            max_length = right - left + 1
-        left -= 1
-        right += 1
-print(s[start:start + max_length])
+# s = "cbbd"
+# start = 0
+# max_length = 0
+# for i in range(len(s)):
+#     # Case 1: Odd-length palindrome
+#     left = i
+#     right = i
+#     while left >= 0 and right < len(s) and s[left] == s[right]:
+#         if right - left + 1 > max_length:
+#             start = left
+#             max_length = right - left + 1
+#         left -= 1
+#         right += 1
+#     # Case 2: Even-length palindrome
+#     left = i
+#     right = i + 1
+#     while left >= 0 and right < len(s) and s[left] == s[right]:
+#         if right - left + 1 > max_length:
+#             start = left
+#             max_length = right - left + 1
+#         left -= 1
+#         right += 1
+# print(s[start:start + max_length])
 
 
 # s = "cbbd"
@@ -139,3 +139,13 @@ print(s[start:start + max_length])
 #     d_a_ = s[i:j-1]
 #     j = j-1
 # print(d_a_)
+
+
+# Palindromic Substrings
+# s = "aaa"
+# count = 0
+# for i in range(len(s)):
+#     for j in range(i+1,len(s)+1):
+#         if (s[i:j]) == s[i:j][::-1]:
+#             count += 1
+# print(count)
