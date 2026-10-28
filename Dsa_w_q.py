@@ -166,4 +166,25 @@
 #             max_area = area
 # print(max_area)
 
-# this is my way of solving this it's cmplexity is o(n^2)
+# this is my way of solving Container With Most Water this it's cmplexity is o(n^2)
+
+height = [1,8,6,2,5,4,8,3,7]
+i = 0
+j = len(height)-1
+max_area = 0
+while i < j:
+    a = height[i]
+    b = height[j]
+    length = j-1
+    c_ht = min(a,b)
+    area = (c_ht * length)
+    
+    if area > max_area:
+        max_area = area
+    if a < b:
+        i = i+1
+    else:
+        j = j-1
+print(max_area)
+
+# this is the stardard way of solving this way by using two pointers 
