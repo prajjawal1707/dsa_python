@@ -556,11 +556,37 @@
 #     j = j-1
 #     print(seen)
 
+# s = "aaa"
+# count = 0
+# for i in range(len(s)-1):
+#     for j in range(len(s)):
+#         if (s[i:j]) == s[i:j][::-1]:
+#             count += 1
+# print(count)
 
-s = "aaa"
-count = 0
-for i in range(len(s)-1):
-    for j in range(len(s)):
-        if (s[i:j]) == s[i:j][::-1]:
-            count += 1
-print(count)
+# Container With Most Water
+
+height = [1,8,6,2,5,4,8,3,7]
+i = 0
+max_area = 0
+for i in range(len(height)):
+    for j in range(len(height)):
+        length = (i-j)
+        a = height[i]
+        b = height[j]
+        c_ht = min(a,b)
+        area = (c_ht * length)
+        if area > max_area:
+            max_area = area
+print(max_area)
+        
+
+        # print(length)
+        # print(height[i],height[j])
+# i = i+1
+# j = j+1
+        # c_le = (count)
+    # count += 1
+# c_le = len(height[a:b])
+# print(c_le)
+# print(a,b)

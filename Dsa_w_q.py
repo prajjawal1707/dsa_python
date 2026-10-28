@@ -149,3 +149,21 @@
 #         if (s[i:j]) == s[i:j][::-1]:
 #             count += 1
 # print(count)
+
+# Container With Most Water
+
+# height = [1,8,6,2,5,4,8,3,7]
+# i = 0
+# max_area = 0
+# for i in range(len(height)):
+#     for j in range(len(height)):
+#         length = (i-j)
+#         a = height[i]
+#         b = height[j]
+#         c_ht = min(a,b)
+#         area = (c_ht * length)
+#         if area > max_area:
+#             max_area = area
+# print(max_area)
+
+# this is my way of solving this it's cmplexity is o(n^2)
