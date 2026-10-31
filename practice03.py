@@ -580,30 +580,24 @@
 #             max_area = area
 # print(max_area)
 
-height = [1,8,6,2,5,4,8,3,7]
-i = 0
-j = len(height)-1
-max_area = 0
-while i < j:
-    a = height[i]
-    b = height[j]
-    length = j-1
-    c_ht = min(a,b)
-    area = (c_ht * length)
+# height = [1,8,6,2,5,4,8,3,7]
+# i = 0
+# j = len(height)-1
+# max_area = 0
+# while i < j:
+#     a = height[i]
+#     b = height[j]
+#     length = j-i
+#     c_ht = min(a,b)
+#     area = (c_ht * length)
     
-    if area > max_area:
-        max_area = area
-    if a < b:
-        i = i+1
-    else:
-        j = j-1
-print(max_area)
-
-
-
-
-
-        
+#     if area > max_area:
+#         max_area = area
+#     if a < b:
+#         i = i+1
+#     else:
+#         j = j-1
+# print(max_area)
 
         # print(length)
         # print(height[i],height[j])
@@ -614,3 +608,48 @@ print(max_area)
 # c_le = len(height[a:b])
 # print(c_le)
 # print(a,b)
+
+# Input: s = "leetcode", wordDict = ["leet","code"]
+# Output: true
+# Explanation: Return true because "leetcode" can be segmented as "leet code".
+
+# s = "leetcode"
+# wordDict = ["leet","code"]
+# i = 0
+# j = len(s)-1
+# while i < j:
+#     if s[i:] not in wordDict:
+#         i = i+1
+#         print(False)
+#     elif s[:j] not in wordDict:
+#         j = j-1
+#         print(False)
+#     else:
+#         print(True)
+
+# s = "leetcode"
+# wordDict = ["leet","code"]
+# p = ""
+# i = 0
+# for char in wordDict:
+#     p = p+char
+#     if p == s:
+#         print(True)
+#     if wordDict[i] in s:
+#         print(True)
+#     else:
+#         print(False)
+    
+
+
+s = "applepenapple", 
+wordDict = ["apple","pen"]
+for char in wordDict:
+    # if char in s:
+    #     print(True)
+    # else:
+    #     print(False)
+    if s.startswith(char) and s == s[len(char):]:
+        print(True)
+    
+
