@@ -668,3 +668,8 @@
 # for num in nums:
 #     tsum = tsum + num
 # print(actual_sum - tsum)
+
+# Output: [[-1,-1,2],[-1,0,1]]
+# 3Sum
+
+nums = [-1,0,1,2,-1,-4]
