@@ -639,17 +639,32 @@
 #         print(True)
 #     else:
 #         print(False)
-    
 
+# s = "applepenapple", 
+# wordDict = ["apple","pen"]
+# for char in wordDict:
+#     # if char in s:
+#     #     print(True)
+#     # else:
+#     #     print(False)
+#     if s.startswith(char) and s == s[len(char):]:
+#         print(True)
 
-s = "applepenapple", 
-wordDict = ["apple","pen"]
-for char in wordDict:
-    # if char in s:
-    #     print(True)
-    # else:
-    #     print(False)
-    if s.startswith(char) and s == s[len(char):]:
-        print(True)
-    
+# def wordBreak(s, wordDict):
+#     if s == "":
+#         return True
+#     for word in wordDict:
+#         if s.startswith(word):
+#             remaining = s[len(word):]
+#             if wordBreak(remaining, wordDict):
+#                 return True
+#     return False
 
+# nums = [3,0,1]
+# tsum = 0
+# # actual_sum = 0
+# n = len(nums)
+# actual_sum = (n*(n+1))//2
+# for num in nums:
+#     tsum = tsum + num
+# print(actual_sum - tsum)
