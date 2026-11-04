@@ -672,4 +672,58 @@
 # Output: [[-1,-1,2],[-1,0,1]]
 # 3Sum
 
+# nums = [-1,0,1,2,-1,-4]
+# nums = sorted(nums)
+# new_arr = []
+# i = 0
+# j = len(nums)-1
+# k = len(nums)-2
+# sum_t = nums[i]+nums[j]+nums[k]
+# for i in range(len(nums)):
+#     if sum_t > 0:
+#         j -= 1
+#         k -= 1
+#         print(i,j,k)
+#     if sum_t < 0:
+#         ...
+
+# nums = [-1,0,1,2,-1,-4]
+# nums = sorted(nums)
+# # print(nums)
+# # [-4, -1, -1, 0, 1, 2]
+# i = 0
+# j = 1
+# k = 2
+# sum_t = nums[i]+nums[j]+nums[k]
+# while i < len(nums) and j < len(nums) and i < len(nums):
+#     if sum_t < 0:
+#         i = i+1
+#     elif sum_t == 0:
+#         print(i,j,k)
+#     else:
+#         j -= 1
+#         k -= 1
+
+
+# arr = [2, 1, 5, 1, 3, 2]
+# k = 3
+# l = 0
+# window_sum = arr[k-3] + arr[k-2] + arr[k-1]
+# mx = window_sum
+# for e in range(k, len(arr)):
+#     window_sum = window_sum - arr[l] + arr[e]
+#     l = l + 1
+#     if window_sum > mx:
+#         mx = window_sum
+# print(mx)
+
 nums = [-1,0,1,2,-1,-4]
+k = 3
+l = 0
+mn = 0
+w_s = nums[k-3]+nums[k-2]+nums[k-1]
+for e in range(k, len(nums)):
+    w_s = w_s - nums[l]+nums[e]
+    l = l + 1
+    if w_s == mn:
+        print(l,e)
