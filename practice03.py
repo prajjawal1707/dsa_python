@@ -727,3 +727,15 @@ for e in range(k, len(nums)):
     l = l + 1
     if w_s == mn:
         print(l,e)
+        
+# Input: "aabbcdeff"
+# Output: "c"
+
+a_t = "aabbcdeff"
+seen = {}
+for char in a_t:
+    if char not in seen:
+        seen  = seen.add(char)
+        # print(char)
+    else:
+        print(char)
