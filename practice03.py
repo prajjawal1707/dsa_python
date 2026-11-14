@@ -717,25 +717,30 @@
 #         mx = window_sum
 # print(mx)
 
-nums = [-1,0,1,2,-1,-4]
-k = 3
-l = 0
-mn = 0
-w_s = nums[k-3]+nums[k-2]+nums[k-1]
-for e in range(k, len(nums)):
-    w_s = w_s - nums[l]+nums[e]
-    l = l + 1
-    if w_s == mn:
-        print(l,e)
+# nums = [-1,0,1,2,-1,-4]
+# k = 3
+# l = 0
+# mn = 0
+# w_s = nums[k-3]+nums[k-2]+nums[k-1]
+# for e in range(k, len(nums)):
+#     w_s = w_s - nums[l]+nums[e]
+#     l = l + 1
+#     if w_s == mn:
+#         print(l,e)
         
 # Input: "aabbcdeff"
 # Output: "c"
 
-a_t = "aabbcdeff"
-seen = {}
-for char in a_t:
-    if char not in seen:
-        seen  = seen.add(char)
-        # print(char)
-    else:
-        print(char)
+# a_t = "aabbcdeff"
+# seen = {}
+# for char in a_t:
+#     if char not in seen:
+#         seen  = seen.add(char)
+#         # print(char)
+#     else:
+#         print(char)
+
+numbers = [1, 1, 1, 2, 2, 3, 3, 3, 3]
+count = {}
+for i, num in enumerate(numbers):
+    print(i, num)
