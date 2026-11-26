@@ -779,17 +779,60 @@
 #     print("No non-repeating character")
 
 
-nums = [-1, 0, 1, 2, -1, -4]
-# [[-1,-1,2],[-1,0,1]]
-i = 0
-j = len(nums)-1
-for num in nums:
-    sum = num + nums[i] + nums[j]
-    i = i + 1
-    j = j-1
+# nums = [-1, 0, 1, 2, -1, -4]
+# #output  [[-1,-1,2],[-1,0,1]]
+# i = 0
+# j = len(nums)-1
 
-    if sum == 0:
-        print(nums, i, j)
-    else:
-        break
-    ...
+
+# for num in nums:
+#     sum = num + nums[i] + nums[j]
+#     i = i + 1
+#     j = j-1
+
+#     if sum == 0:
+#         print(nums, i, j)
+#     else:
+#         break
+#     ...
+
+# nums = [-1, 0, 1, 2, -1, -4]
+# num1 = sorted(nums)
+# i = 0
+# for i in range(len(num1)):
+#     if i > 0 and num1[i] == num1[i-1]:
+#         continue
+#     j = i +1
+#     k = len(num1)-1
+#     while j < k:
+#         total = num1[i] + num1[j]+ num1[k]
+#         if total > 0:
+#             k = k-1
+#         elif total < 0:
+#             j = j+1
+#         elif total == 0:
+#             print([num1[i],num1[j],num1[k]])
+#             k = k-1
+#             j = j+1
+            
+
+# if i > 0 and num1[i] == num1[i-1]:
+#                 continue
+# while j < k and num1[j] == num1[j-1]:
+#                         j += 1
+#                     while j < k and num1[k] == num1[k+1]:
+#                         k = k -1
+
+# in this code we use it here to remove the duplicate 
+# and we use res for the list as after return it gets out from the function 
+
+# Input: head = [1,2,3,4]
+# Output: [1,4,2,3]
+# [1,5,2,4,3]
+
+h = [1,2,3,4,5]
+j = len(h)-1
+for i in range(1,len(h),2):
+    h[i],h[j] = h[j], h[i]
+    print(h)
+

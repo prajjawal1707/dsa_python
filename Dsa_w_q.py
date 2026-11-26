@@ -187,3 +187,37 @@
 # print(max_area)
 
 # this is the stardard way of solving this way by using two pointers 
+
+
+
+# 3 sum question
+
+# nums = [-1, 0, 1, 2, -1, -4]
+# num1 = sorted(nums)
+# i = 0
+# for i in range(len(num1)):
+#     if i > 0 and num1[i] == num1[i-1]:
+#         continue
+#     j = i +1
+#     k = len(num1)-1
+#     while j < k:
+#         total = num1[i] + num1[j]+ num1[k]
+#         if total > 0:
+#             k = k-1
+#         elif total < 0:
+#             j = j+1
+#         elif total == 0:
+#             print([num1[i],num1[j],num1[k]])
+#             k = k-1
+#             j = j+1
+            
+
+# if i > 0 and num1[i] == num1[i-1]:
+#                 continue
+# while j < k and num1[j] == num1[j-1]:
+#                         j += 1
+#                     while j < k and num1[k] == num1[k+1]:
+#                         k = k -1
+
+# in this code we use it here to remove the duplicate 
+# and we use res for the list as after return it gets out from the function 
