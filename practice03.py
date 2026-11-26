@@ -740,7 +740,56 @@
 #     else:
 #         print(char)
 
-numbers = [1, 1, 1, 2, 2, 3, 3, 3, 3]
-count = {}
-for i, num in enumerate(numbers):
-    print(i, num)
+
+
+# s = "aabbcde"
+# count = {}
+# for char in s:
+#     if char in count:
+#         count[char] = count[char] + 1
+#     else:
+#         count[char] = 1
+#         # break
+# for char in count:
+#     if count[char] == 1:
+#         print(char)
+#         break
+
+
+        # print(char)
+        # ...
+    # else:
+        # count[char] = count[char] + 1
+        # print(char)
+
+# s = "aabcc"
+# count = {}
+
+# for char in s:
+#     if char in count:
+#         count[char] += 1
+#     else:
+#         count[char] = 1
+
+# for char in count:
+#     if count[char] == 1:
+#         print(char)
+#         break
+# else:
+#     print("No non-repeating character")
+
+
+nums = [-1, 0, 1, 2, -1, -4]
+# [[-1,-1,2],[-1,0,1]]
+i = 0
+j = len(nums)-1
+for num in nums:
+    sum = num + nums[i] + nums[j]
+    i = i + 1
+    j = j-1
+
+    if sum == 0:
+        print(nums, i, j)
+    else:
+        break
+    ...
