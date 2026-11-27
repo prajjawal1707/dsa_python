@@ -830,9 +830,65 @@
 # Output: [1,4,2,3]
 # [1,5,2,4,3]
 
-h = [1,2,3,4,5]
-j = len(h)-1
-for i in range(1,len(h),2):
-    h[i],h[j] = h[j], h[i]
-    print(h)
+# h = [1,2,3,4,5]
+# j = len(h)-1
+# for i in range(1,len(h),1):
+#     # while i < j:
+#     h[i],h[j] = h[j], h[i]
+#     print(h)
 
+
+# class node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+
+# # creating nodes
+# node1 = Node(10)
+# node2 = Node(20)
+
+# # connecting nodes 
+# node1.next = node2
+
+# # traversing a linked list
+# current = head
+# while current != None:
+#     print(current.data)
+#     current = current.next
+
+# # insert at the beginning
+# new_node.next = head
+# head = new_node
+
+# # insert at the end
+# current = head
+# while current.next != None:
+#     current = current.next
+# current.next = new_node
+
+# delete a middle node 
+# node1.next = node3
+
+# # delete the last node 
+# node2.next = None
+
+# # search 
+# if current.data == target
+
+# def insert_at_beginning(self,dat):
+#     self.data = data 
+#     newnode = newnode(data)
+#     newnode.head = head
+#     head = newnode
+
+# # insert at the End 
+
+# def insert_at_end(self,data):
+#     new_node = Node(data)
+#     if self.head == None:
+#         self.head = new_node
+#         return
+#     current = self.head
+#     while current.next != None:
+#         current = current.next
+#     current.next = new_node
