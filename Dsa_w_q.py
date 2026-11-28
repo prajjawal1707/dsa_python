@@ -224,18 +224,18 @@
 
 
 
-class Solution:
-    def reverseList(self, head):
-        prev = None       # There is no previous node for the first node
-        current = head    # Start traversing from the head
+# class Solution:
+#     def reverseList(self, head):
+#         prev = None       # There is no previous node for the first node
+#         current = head    # Start traversing from the head
 
-        while current:
-            next_node = current.next  # Save the next node before changing the link
+#         while current:
+#             next_node = current.next  # Save the next node before changing the link
 
-            current.next = prev       # Reverse the link: point current backwards
+#             current.next = prev       # Reverse the link: point current backwards
 
-            prev = current            # Move prev forward to the current node
+#             prev = current            # Move prev forward to the current node
 
-            current = next_node       # Move current forward to the saved next node
+#             current = next_node       # Move current forward to the saved next node
 
-        return prev                   # Prev is now the new head of the reversed list
+#         return prev                   # Prev is now the new head of the reversed list

@@ -892,3 +892,14 @@
 #     while current.next != None:
 #         current = current.next
 #     current.next = new_node
+
+
+list1 = [1,2,4]
+list2 = [1,3,4]
+# Output: [1,1,2,3,4,4]
+if list1.val <= list2.val:
+    current.next = list1
+    list1 = list1.next
+
+
+# first we chose the head from any list either list 1 or list 2
